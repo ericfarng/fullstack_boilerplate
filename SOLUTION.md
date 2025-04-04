@@ -36,7 +36,7 @@ But I would finish creating the remaining CRUD endpoints in all three MVC layers
 
 I kept the same tech stack.
 `npm run dev` should still  work
-I am using my own OpenAI key.
+I am using my own OpenAI key. You'll have to put your own OpenAI API key into `LlmService.ts`
 
 
 ## Feedback for Stepful
