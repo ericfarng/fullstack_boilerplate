@@ -7,29 +7,26 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { quizPath } from "@/paths";
+import { assignmentDetailPath } from "@/api/path";
 import { Link } from "react-router-dom";
+import type { AssignmentModel } from "@/api/assignmentApi";
 
-function QuizItem({ name, id }: Quiz) {
+function AssignmentItem({ title, id }: AssignmentModel) {
 	return (
 		<TableRow>
 			<TableCell>{id}</TableCell>
-			<TableCell>{name}</TableCell>
+			<TableCell>{title}</TableCell>
 			<TableCell>
 				<Button asChild>
-					<Link to={quizPath({ id: id.toString() })}>Take quiz</Link>
+					<Link to={assignmentDetailPath({ id: id.toString() })}>Take quiz</Link>
 				</Button>
 			</TableCell>
 		</TableRow>
 	);
 }
 
-export type Quiz = {
-	id: number;
-	name: string;
-};
 
-export function QuizzesList({ quizzes }: { quizzes: Quiz[] }) {
+export function AssignmentList({ assignmentList }: { assignmentList: AssignmentModel[] }) {
 	return (
 		<Table>
 			<TableHeader>
@@ -39,7 +36,7 @@ export function QuizzesList({ quizzes }: { quizzes: Quiz[] }) {
 					<TableHead>Actions</TableHead>
 				</TableRow>
 			</TableHeader>
-			<TableBody>{quizzes.map((quiz) => QuizItem(quiz))}</TableBody>
+			<TableBody>{assignmentList.map((assignment) => AssignmentItem(assignment))}</TableBody>
 		</Table>
 	);
 }

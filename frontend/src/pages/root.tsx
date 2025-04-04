@@ -1,27 +1,27 @@
-import { type Quiz, QuizzesList } from "@/components/quiz";
-import { quizzesApiUrl } from "@/paths";
+import { assignmentGetAllApiUrl, type AssignmentModel } from "@/api/assignmentApi";
+import { AssignmentList } from "@/components/assignment";
 import { useEffect, useState } from "react";
 
 export function RootPage() {
-	const [quizzes, setQuizzes] = useState<Quiz[]>([]);
+	const [assignmentList, setAssignmentList] = useState<AssignmentModel[]>([]);
 	const [error, setError] = useState<Error | null>(null);
 
 	useEffect(() => {
-		fetch(quizzesApiUrl({}))
+		fetch(assignmentGetAllApiUrl({}))
 			.then((res) => res.json())
-			.then(setQuizzes)
+			.then(setAssignmentList)
 			.catch(setError);
 	}, []);
 
 	if (error) return <div>An error has occurred: {error.message}</div>;
 
-	if (!quizzes) return <div className="text-center p-8">Loading...</div>;
+	if (!assignmentList) return <div className="text-center p-8">Loading...</div>;
 
 	return (
 		<>
 			<div className="text-xl text-muted-foreground mt-5">Welcome back!</div>
 			<div className="mt-10 text-lg text-center">
-				<QuizzesList quizzes={quizzes} />
+				<AssignmentList assignmentList={assignmentList} />
 			</div>
 		</>
 	);

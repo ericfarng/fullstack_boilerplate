@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { db } from "../db-client";
+import { db } from "../src/model/db-client";
 
 try {
 	db.transaction(() => {
@@ -11,6 +11,10 @@ try {
 
 		for (const migration of migrations) {
 			const rawSql = fs.readFileSync(`./migrations/${migration}`, "utf8");
+
+			console.log(`--- Begin SQL from ${migration} ---`);
+			console.log(rawSql);
+			console.log(`--- End SQL ---`);
 
 			console.log(`--> Running migration: ${migration}`);
 			db.exec(rawSql);

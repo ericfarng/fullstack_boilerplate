@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Layout } from "@/components/layout";
-import { QuizPage } from "@/pages/quiz";
+import { AssignmentPage } from "@/pages/assignment";
 import { RootPage } from "@/pages/root";
-import { rootPath, quizPath } from "@/paths";
+import { rootPath, assignmentDetailPath } from "@/api/path";
 
 const router = createBrowserRouter([
 	{
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
 				element: <RootPage />,
 			},
 			{
-				path: quizPath.pattern,
-				element: <QuizPage />,
+				path: assignmentDetailPath.pattern,
+				element: <AssignmentPage />,
 			},
 		],
 	},

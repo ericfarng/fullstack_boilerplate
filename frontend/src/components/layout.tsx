@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { rootPath } from "@/paths";
+import { rootPath } from "@/api/path";
 
 export function Layout() {
 	return (
