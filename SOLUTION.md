@@ -15,7 +15,7 @@ eric.farng@gmail.com
 #### Features & Enhancements
 * Randomized answer order and (potentially) question order.
 
-* "Confirm" button added to improve UX flow.
+* `Confirm` button added to improve UX flow.
 
 * LLM Integration: I couldn't get your endpoint to work, so I used my own OpenAI API key. The implementation is in `LlmService.ts`.
 
@@ -24,10 +24,10 @@ eric.farng@gmail.com
 #### State Management (Partially Implemented)
 I understand state management is one of the grading criteria, likely tied to the ability to resume a quiz where a user left off. I focused instead on completing the LLM integration, but here’s how I would implement the resume flow:
 
-1. Skip authentication for now—use a simple `user_emai`l field.
+1. Skip authentication for now—use a simple `user_email` field.
 2. After each question, save the response to the `user_answer` table.
 3. When a user returns, hit a `/question/resume` endpoint to load the next unanswered question.
-4. Any "immediate feedback" logic would continue to be calculated in the backend controller.
+4. Remaining `Immediate feedback` logic would continue to be calculated in the backend controller.
 
 
 ## (If you didn't go with the boilerplate) Notes on design/architecture and rationale
