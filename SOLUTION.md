@@ -8,17 +8,17 @@ eric.farng@gmail.com
 I changed the data model from what was given.
 I also included a user_answer table, but I didn't implement anything else for that
 
-Backend is MVC, the directory names have the file
-it is also uses classes and OOP
+Backend is MVC, the directories are named appropriately.
 
-In the frontend code, I moved all of the logic for REST calls into an API directory
-Further UI updates
+I also used classes and OOP.
+
+In the frontend code, I moved all of the logic for REST calls into an API directory. Future UI updates include:
 1. randomize answer order, and maybe question order
 2. add confirm button
 
-LLM -
-I couldn't get your endpoint to work. I used my own key isntead.
-The code is in LlmService.ts
+###LLM
+I couldn't get your endpoint to work. I used my own key instead. The code is in `LlmService.ts`
+
 Additional work would include having an ideal answer that the LLM can also compare to. We can potentially use the LLM to generate it, and then a human to check it.
 
 
