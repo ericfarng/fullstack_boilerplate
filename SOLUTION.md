@@ -45,6 +45,8 @@ It's longer than others. I like having the grading criteria and knowing what to 
 
 ## Anything else you'd like us to know?
 Not required, but we love learning about what you're passionate about, so if you link us a personal blog or website, or anything else that you've written, we'd love to check them out!
+```
 shihoueri.com
-login demo
-password demo
+login: demo
+password: demo
+```
