@@ -34,13 +34,14 @@ But I would finish creating the remaining CRUD endpoints in all three MVC layers
 
 ## (If you didn't go with the boilerplate) Notes on design/architecture and rationale
 
-I kept the same tech stack.
-`npm run dev` should still  work
+I kept the same tech stack. `npm run dev` should still  work
+
 I am using my own OpenAI key. You'll have to put your own OpenAI API key into `LlmService.ts`
 
 
 ## Feedback for Stepful
 _Please feel free to share feedback with us! What you liked or didn't like, how this takehome compares to others you've taken in the past_
+
 It's longer than others. I like having the grading criteria and knowing what to spend my time on
 
 ## Anything else you'd like us to know?
