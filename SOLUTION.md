@@ -9,7 +9,7 @@ eric.farng@gmail.com
 
 * The backend follows an MVC structure, using class-based design and OOP principles. Directory names reflect their corresponding files for better organization.
 
-* On the frontend, I moved all REST API logic into an /api directory to improve maintainability. I also made various UI updates.
+* On the frontend, I moved all REST API logic into an `/api` directory to improve maintainability. I also made various UI updates.
 
 
 #### Features & Enhancements
@@ -17,16 +17,16 @@ eric.farng@gmail.com
 
 * "Confirm" button added to improve UX flow.
 
-* LLM Integration: I couldn't get your endpoint to work, so I used my own OpenAI API key. The implementation is in LlmService.ts.
+* LLM Integration: I couldn't get your endpoint to work, so I used my own OpenAI API key. The implementation is in `LlmService.ts`.
 
-** In the future, we could also use the LLM to generate an ideal answer that a human can validate—enabling both comparison and explanation-based feedback.
+*  In the future, we could also use the LLM to generate an ideal answer that a human can validate—enabling both comparison and explanation-based feedback.
 
 #### State Management (Partially Implemented)
 I understand state management is one of the grading criteria, likely tied to the ability to resume a quiz where a user left off. I focused instead on completing the LLM integration, but here’s how I would implement the resume flow:
 
-1. Skip authentication for now—use a simple user_email field.
-2. After each question, save the response to the user_answer table.
-3. When a user returns, hit a /question/resume endpoint to load the next unanswered question.
+1. Skip authentication for now—use a simple `user_emai`l field.
+2. After each question, save the response to the `user_answer` table.
+3. When a user returns, hit a `/question/resume` endpoint to load the next unanswered question.
 4. Any "immediate feedback" logic would continue to be calculated in the backend controller.
 
 
@@ -46,8 +46,11 @@ _Please feel free to share feedback with us! What you liked or didn't like, how 
 
 ## Anything else you'd like us to know?
 Not required, but we love learning about what you're passionate about, so if you link us a personal blog or website, or anything else that you've written, we'd love to check them out!
-```
+
+
 http://www.shihoueri.com
+
+```
 Login: demo
 Password: demo
 ```
